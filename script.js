@@ -1,4 +1,3 @@
-// Helper / Utility functions
 let url_to_head = (url) => {
     return new Promise(function(resolve, reject) {
         var script = document.createElement('script');
@@ -62,7 +61,6 @@ url_to_head(paypal_sdk_url + "?client-id=" + client_id + "&enable-funding=venmo&
             .then((order_details) => {
                 console.log(order_details);
                 let intent_object = intent === "authorize" ? "authorizations" : "captures";
-                //Custom Successful Message
                 alerts.innerHTML = `<div class=\'ms-alert ms-action\'>Thank you ` + order_details.payer.name.given_name + ` ` + order_details.payer.name.surname + ` for your payment of ` + order_details.purchase_units[0].payments[intent_object][0].amount.value + ` ` + order_details.purchase_units[0].payments[intent_object][0].amount.currency_code + `!</div>`;
 
                 paypal_buttons.close();
