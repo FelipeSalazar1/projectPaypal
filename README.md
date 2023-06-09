@@ -1,3 +1,3 @@
 # projectPaypal
 
-I tried my best doing it in this, and Im still searching methods to learn more about it.
+This is what I can do now, but I am anxious to learn more with this company.
